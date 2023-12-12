@@ -29,6 +29,7 @@ class MiddlewarePracticeController extends Controller
     function demoAction4(): string
     {
         return "Hello OS 4";
+<<<<<<< HEAD
 
     }
 
@@ -40,5 +41,7 @@ class MiddlewarePracticeController extends Controller
     function rateLimit(Request $request)
     {
         return "Hello OS";
+=======
+>>>>>>> 3e9e34118708a8d469e87dc992c348fdd410691b
     }
 }

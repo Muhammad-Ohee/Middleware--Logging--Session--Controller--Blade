@@ -16,6 +16,7 @@ class Demomiddleware
     public function handle(Request $request, Closure $next): Response
     {
         //$key = $request->header('API-key');
+<<<<<<< HEAD
 //        $key = $request->key;
 //        if($key=='os44'){
 //            return $next($request);
@@ -46,5 +47,17 @@ class Demomiddleware
 
         return $next($request);
 
+=======
+        $key = $request->key;
+        if($key=='os44'){
+            return $next($request);
+        }
+        else{
+            return response()->json('unauthorized', 401);
+            //return redirect('/hello2');
+        }
+
+
+>>>>>>> 3e9e34118708a8d469e87dc992c348fdd410691b
     }
 }

@@ -1,11 +1,16 @@
 <?php
 
+<<<<<<< HEAD
 use App\Http\Controllers\ConstructController;
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MiddlewarePracticeController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\SingleActionController;
+=======
+use App\Http\Controllers\DemoController;
+use App\Http\Controllers\MiddlewarePracticeController;
+>>>>>>> 3e9e34118708a8d469e87dc992c348fdd410691b
 use App\Http\Middleware\Demomiddleware;
 use Illuminate\Support\Facades\Route;
 
@@ -20,9 +25,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+<<<<<<< HEAD
 //Route::get('/', function () {
 //    return view('welcome');
 //});
+=======
+Route::get('/', function () {
+    return view('welcome');
+});
+>>>>>>> 3e9e34118708a8d469e87dc992c348fdd410691b
 
 Route::get('/demo/{num1}/{num2}', [DemoController::class, 'demoAction']);
 
@@ -48,6 +59,7 @@ Route::get('/hello1/{key}', [MiddlewarePracticeController::class, 'demoAction1']
 Route::get('/hello2/{key}', [MiddlewarePracticeController::class, 'demoAction2']);
 Route::get('/hello3/{key}', [MiddlewarePracticeController::class, 'demoAction3']);
 Route::get('/hello4/{key}', [MiddlewarePracticeController::class, 'demoAction4']);
+<<<<<<< HEAD
 
 Route::get('/changeHeader', [MiddlewarePracticeController::class, 'changeHeader'])->middleware([Demomiddleware::class]);
 
@@ -71,3 +83,5 @@ DELETE()        DESTROY     http://127.0.0.1:8000/photos/{photo}
 Route::get('/construct', [ConstructController::class, 'demoAction']);
 
 Route::get('/', [HomeController::class, 'page']);
+=======
+>>>>>>> 3e9e34118708a8d469e87dc992c348fdd410691b
